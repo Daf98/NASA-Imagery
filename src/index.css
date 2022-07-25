@@ -7,19 +7,14 @@
     box-sizing: border-box;
   }
 
-  button {
-    cursor: pointer;
+  *:root {
+    --main-blue: #4369b2;
+    --dark-blue: #35548b;
+    --light-blue: #5889e5;
+    --dark: #1d1d1d;
+    --light: #fefefe;
   }
 
-  *:root {
-    --dark: #000;
-    --dark-bg: rgba(0, 0, 0, 0.384);
-    --light: #fff;
-    --blue: #357bd9;
-    --light-gray: #f2f2f2;
-    --border: #dfe0e2;
-    --mid-gray: #585d62;
-    --lighter-gray: #787f86;
-    --warning: #da3849;
-    --active: #25a2b7;
+  button {
+    cursor: pointer;
   }
