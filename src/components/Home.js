@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Category from "./Category";
-import fetchDataFromAPI from "../redux/api";
+import { fetchMainDataFromAPI } from "../redux/api";
 import { useDispatch, useSelector } from "react-redux";
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
 
   const celestialBodies = useSelector((state) => state);
   useEffect(() => {
-      dispatch(fetchDataFromAPI());
+    dispatch(fetchMainDataFromAPI());
   }, []);
   return (
     <>

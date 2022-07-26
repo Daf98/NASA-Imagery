@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
+import Filter from './Filter';
+import { fetchDetailDataFromAPI } from '../redux/api';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
 
-const Detail = () => (
+const Detail = () => {
+  const dispatch = useDispatch();
+  const collections = useSelector((state) => state);
+  useEffect(() => {
+    dispatch(fetchDetailDataFromAPI());
+  }, []);
+  return (
   <>
     <Navbar />
-    <div>Here are the images for the category I clicked on</div>
-    <img src="https://images-assets.nasa.gov/image/PIA09844/PIA09844~thumb.jpg" />
-    <h3>Date</h3>
+    {collections[0].collection ? <Filter /> : <h1>Loading...</h1>}
+    
   </>
-);
+  )
+};
 
 export default Detail;
