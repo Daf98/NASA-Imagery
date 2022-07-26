@@ -1,24 +1,25 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Category from "./Category";
-import { fetchMainDataFromAPI } from "../redux/api";
+import { fetchMainDataFromAPI, fetchDetailDataFromAPI } from "../redux/api";
 import { useDispatch, useSelector } from "react-redux";
 
 const Home = () => {
   const dispatch = useDispatch();
-
   const celestialBodies = useSelector((state) => state);
   useEffect(() => {
-    dispatch(fetchMainDataFromAPI());
+    dispatch(fetchDetailDataFromAPI());
   }, []);
+
   return (
     <>
       <h1>Categories</h1>
       {celestialBodies ? (
         celestialBodies.map((body) => (
-          <button type="button" key={body.bodyNumber}>
-            <NavLink to={`/detail/${body.bodyName}`}>
-              <Category name={body.bodyName} data={body.bodyNumber} />
+          <button type="button" key={body.collection.items[0].data[0].date_created}>
+            <NavLink to={`/detail/${body.collection.href.toString().slice(36)}`}>
+              <Category name={body.collection.href.toString().slice(36)} data={body.collection.metadata.total_hits} />
+              {console.log(window.location.pathname)}
             </NavLink>
           </button>
         ))

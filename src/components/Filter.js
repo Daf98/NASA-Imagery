@@ -1,11 +1,16 @@
 // stateless component
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
+import { fetchDetailDataFromAPI } from "../redux/api";
 
 const Filter = () => {
+    const dispatch = useDispatch();
   let { userId } = useParams();
   const collections = useSelector((state) => state);
+  useEffect(() => {
+    dispatch(fetchDetailDataFromAPI());
+  }, []);
   return (
     <>
       {collections &&
