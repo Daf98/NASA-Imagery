@@ -2,26 +2,22 @@ import { fetchData } from "./configureStore";
 const baseURL = "https://images-api.nasa.gov/search?q=";
 // fetch data from API and move it to store
 const fetchDataFromAPI = () => async (dispatch) => {
-    const bodies = ["planet", "galaxy", "black-hole", "nebula", "moon", "sun"];
-    // bodies.map((body) => data = await fetch(`${baseURL}${body}`))
-    const response = [];
+    const bodies = ["planets", "galaxies", "black-holes", "nebulas", "moons", "suns"];
+    const responses = [];
     const result = [];
-    for(let i of bodies){
-        const data = await fetch(`${baseURL}${i}`);
-        const waited = await data.json();
-        response.push(waited);
+    for(let body of bodies){
+        const data = await fetch(`${baseURL}${body}`);
+        responses.push(await data.json());
     }
-  
-//   const response = await data.json();
-    // console.log(response[0].collection.href);
-    response.map(i => {
-        const hyperlink = i.collection.href;
-        const bodyName = hyperlink.toString().slice(36);
-        const bodyNumber = i.collection.metadata.total_hits;
+    responses.map(response => {
+        const hyperlink = response.collection.href;
+        const hyphenedName = hyperlink.toString().slice(36);
+        const underscoreName = hyphenedName.replace(/[^\w\']|_/g, "");
+        const bodyName = underscoreName.charAt(0).toUpperCase() + underscoreName.slice(1);
+        const bodyNumber = response.collection.metadata.total_hits;
         const info = { bodyName, bodyNumber };
         result.push(info)
     })
-    console.log(result);
     dispatch(fetchData(result));
 };
 export default fetchDataFromAPI;
