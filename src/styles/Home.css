@@ -1,0 +1,32 @@
+#home-header {
+  text-align: center;
+  background-color: var(--light-blue);
+  padding: 4rem 1rem;
+}
+
+#home-sub {
+  background-color: var(--dark-blue);
+  padding: 0 0.5rem;
+}
+
+#home-grid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#home-btn {
+  text-align: center;
+  border: 1px solid var(--dark-blue);
+  color: var(--light);
+  background-color: var(--main-blue);
+  font-size: 20px;
+  padding: 1rem;
+  height: 10rem;
+}
+
+#home-btn:nth-child(1),
+#home-btn:nth-child(4),
+#home-btn:nth-child(5) {
+  background-color: var(--gray-blue);
+}
