@@ -21,8 +21,7 @@ const Filter = () => {
             <>
               <h1 id="celestial-header">{userId}</h1>
               <h2 id="filter-sub">
-                List Of
-                {userId}
+                {`List of ${userId}`}
               </h2>
               {collection.collection.items.map((item) => (
                 <div key={item.data[0].nasa_id} id="celestial-container">
@@ -30,8 +29,8 @@ const Filter = () => {
                   <div id="celestial-data">
                     <img src={item.links[0].href} alt="Space" />
                     <h3>
-                      Date created:
-                      {item.data[0].date_created.slice(0, 10)}
+
+                      {`Date created: ${item.data[0].date_created.slice(0, 10)}`}
                     </h3>
                   </div>
                 </div>
