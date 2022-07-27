@@ -1,19 +1,20 @@
+/* eslint-disable no-await-in-loop */
 import { fetchData } from './configureStore';
 
 const baseURL = 'https://images-api.nasa.gov/search?q=';
 const bodies = [
-  'Planet',
-  'Galaxy',
-  'Black-hole',
-  'Nebula',
-  'Moon',
-  'Sun',
+  'Planets',
+  'Galaxies',
+  'Black holes',
+  'Nebulas',
+  'Moons',
+  'Suns',
 ];
 // fetch data from API and move it to store
 const fetchDataFromAPI = () => async (dispatch) => {
   const responses = [];
-  for (const body of bodies) {
-    const data = await fetch(`${baseURL}${body}`);
+  for (let i = 0; i < bodies.length; i += 1) {
+    const data = await fetch(`${baseURL}${bodies[i]}`);
     responses.push(await data.json());
   }
   dispatch(fetchData(responses));
