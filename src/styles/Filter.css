@@ -3,3 +3,30 @@
   background-color: var(--light-blue);
   padding: 4rem 1rem;
 }
+
+#filter-sub {
+  background-color: var(--dark-blue);
+  padding: 0 0.5rem;
+}
+
+#celestial-title {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+#celestial-container {
+  padding: 2rem 0;
+  background-color: var(--galaxy-blue);
+}
+
+#celestial-container:nth-child(odd) {
+  background-color: var(--gray-blue);
+}
+
+#celestial-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
