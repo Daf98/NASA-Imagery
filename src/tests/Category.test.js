@@ -13,7 +13,7 @@ const categoryRender = () => (
   <BrowserRouter>
     <Category
       name={props.name}
-      data={props.title}
+      data={props.data}
     />
   </BrowserRouter>
 );

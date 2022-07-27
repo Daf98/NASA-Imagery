@@ -6,7 +6,7 @@ import App from '../App';
 import store from '../redux/configureStore';
 import '@testing-library/jest-dom';
 
-jest.timeOut(9000);
+jest.setTimeout(9000);
 
 describe('Jest Snapshot testing suite', () => {
   it('Matches DOM Snapshot', () => {
