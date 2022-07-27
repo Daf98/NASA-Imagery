@@ -1,8 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# NASA imagery
+# NASA Imagery
+![](https://i.imgur.com/RdcsHKt.png)
+![](https://i.imgur.com/AcV9JkQ.png)
 
-> In this app you can see images directly from NASA.
+> In this app, the user can choose from a list of celestial bodies (planets, black holes, suns, galaxies and nebulas) and see images directly from NASA. The images are shown with their title and the date they were created on.
 
 
 ## Built With
@@ -13,7 +15,8 @@
 
 ## Live Demo
 
-[Live Demo]()
+[Live Demo](https://daf98-nasa-images.herokuapp.com)
+[Video Demo]()
 
 
 ## Getting Started
