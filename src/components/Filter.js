@@ -19,9 +19,9 @@ const Filter = () => {
           (collection) => collection.collection.href.includes(userId)
             && (
             <>
-              <h1 id="celestial-header">{userId}</h1>
+              <h1 id="celestial-header">{userId.replace(/-/g, ' ')}</h1>
               <h2 id="filter-sub">
-                {`List of ${userId}`}
+                {`List of ${userId.replace(/-/g, ' ')}`}
               </h2>
               {collection.collection.items.map((item) => (
                 <div key={item.data[0].nasa_id} id="celestial-container">
