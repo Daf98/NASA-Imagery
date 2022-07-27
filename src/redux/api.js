@@ -4,11 +4,10 @@ import { fetchData } from './configureStore';
 const baseURL = 'https://images-api.nasa.gov/search?q=';
 const bodies = [
   'Planets',
-  'Galaxies',
   'Black-holes',
   'Nebulas',
-  'Moons',
   'Suns',
+  'Galaxies',
 ];
 // fetch data from API and move it to store
 const fetchDataFromAPI = () => async (dispatch) => {

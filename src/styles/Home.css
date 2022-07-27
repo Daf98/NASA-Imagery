@@ -26,7 +26,11 @@
 }
 
 #home-btn:nth-child(1),
-#home-btn:nth-child(4),
-#home-btn:nth-child(5) {
+#home-btn:nth-child(4) {
   background-color: var(--gray-blue);
+}
+
+#home-btn:nth-child(5) {
+  grid-column: 1/3;
+  background-color: var(--galaxy-blue);
 }
