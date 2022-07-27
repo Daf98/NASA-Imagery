@@ -19,7 +19,7 @@ const Home = () => {
           <button type="button" key={body.collection.items[0].data[0].date_created}>
             <NavLink to={`/detail/${body.collection.href.toString().slice(36)}`}>
               <Category
-                name={body.collection.href.toString().slice(36)}
+                name={body.collection.href.toString().slice(36).replace(/-/g, ' ')}
                 data={body.collection.metadata.total_hits}
               />
             </NavLink>

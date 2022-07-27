@@ -5,7 +5,7 @@ const baseURL = 'https://images-api.nasa.gov/search?q=';
 const bodies = [
   'Planets',
   'Galaxies',
-  'Black holes',
+  'Black-holes',
   'Nebulas',
   'Moons',
   'Suns',
