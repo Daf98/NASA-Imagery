@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import Category from "./Category";
-import { fetchMainDataFromAPI, fetchDetailDataFromAPI } from "../redux/api";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import Category from './Category';
+import fetchDataFromAPI from '../redux/api';
 
 const Home = () => {
   const dispatch = useDispatch();
   const celestialBodies = useSelector((state) => state);
   useEffect(() => {
-    dispatch(fetchDetailDataFromAPI());
+    dispatch(fetchDataFromAPI());
   }, []);
 
   return (

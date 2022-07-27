@@ -15,6 +15,7 @@ const homeReducer = (state = initialState, action) => {
   if (action.type === CATEGORIES_FETCHED) {
     return action.payload;
   }
+  return state;
 };
 
 const store = configureStore({

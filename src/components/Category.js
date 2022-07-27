@@ -1,8 +1,6 @@
 import React from 'react';
 
-const Category = (props) => {
-
-  return(
+const Category = (props) => (
   <>
     <h2>{props.name}</h2>
     <h3>
@@ -10,7 +8,6 @@ const Category = (props) => {
       {props.data}
     </h3>
   </>
-)
-};
+);
 
 export default Category;
