@@ -18,7 +18,15 @@ const Filter = () => {
           (collection) => 
             collection.collection.href.includes(userId) &&
             (
-                <div key={userId}>Works</div>
+                <>
+                {collection.collection.items.map((item) =>
+                <div key={item.data[0].nasa_id}>
+                <h2>{item.data[0].title}</h2>
+                <img src={item.links[0].href}></img>
+                <h3>Date created: {item.data[0].date_created.slice(0, 10)}</h3>
+                </div>
+                )}
+                </>
             )
             )
     )}
