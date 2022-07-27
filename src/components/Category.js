@@ -5,8 +5,7 @@ const Category = ({ name, data }) => (
   <>
     <h2>{name}</h2>
     <h3>
-      Total hits:
-      {data}
+      {`Total hits: ${data}`}
     </h3>
   </>
 );
