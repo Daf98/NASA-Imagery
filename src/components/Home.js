@@ -9,7 +9,7 @@ const Home = () => {
   const celestialBodies = useSelector((state) => state);
   useEffect(() => {
     dispatch(fetchDataFromAPI());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

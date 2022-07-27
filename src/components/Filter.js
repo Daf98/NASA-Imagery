@@ -10,7 +10,7 @@ const Filter = () => {
   const collections = useSelector((state) => state);
   useEffect(() => {
     dispatch(fetchDataFromAPI());
-  }, []);
+  }, [dispatch]);
   return (
     <>
       {collections
