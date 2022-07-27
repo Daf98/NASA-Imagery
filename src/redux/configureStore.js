@@ -8,7 +8,6 @@ export const fetchData = (payload) => ({
   type: CATEGORIES_FETCHED,
   payload,
 });
-
 const initialState = [];
 // reducer
 const homeReducer = (state = initialState, action) => {
