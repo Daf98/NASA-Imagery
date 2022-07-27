@@ -18,7 +18,10 @@ const Home = () => {
         celestialBodies.map((body) => (
           <button type="button" key={body.collection.items[0].data[0].date_created}>
             <NavLink to={`/detail/${body.collection.href.toString().slice(36)}`}>
-              <Category name={body.collection.href.toString().slice(36)} data={body.collection.metadata.total_hits} />
+              <Category
+                name={body.collection.href.toString().slice(36)}
+                data={body.collection.metadata.total_hits}
+              />
             </NavLink>
           </button>
         ))
