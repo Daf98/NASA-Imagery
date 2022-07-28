@@ -1,0 +1,14 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue);
+  padding: 1rem;
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+  color: var(--light);
+  font-size: 20px;
+}
